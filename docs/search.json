@@ -24,7 +24,7 @@
     "href": "ch-1.html#数据结构",
     "title": "2  R基础",
     "section": "2.2 数据结构",
-    "text": "2.2 数据结构\n\n2.2.1 向量\n向量（vector）是R中最基础的数据结构，它可以看作是一个一维数组，可以储存数值型、字符型、逻辑型数据。一个向量中的元素必须是同一种类型。\n如下可以创建向量：\n\na &lt;- c(1,2,3,4,5)\nb &lt;- c(\"I\",\"Love\",\"You\")\nc &lt;- c(TRUE,FALSE,TRUE)\n\n\n\n2.2.2 矩阵\n矩阵（matrix）和向量类似，它可以看作是一个二维数组，其中的元素必须类型相同。\n\n\n2.2.3 数组\n数组（array）是矩阵的推广，可以看作是三维数组，其中的元素也必须类型相同。\n\n\n2.2.4 数据框\n数据框是R中极常用的一种数据结构。\n\n\n2.2.5 列表\n列表（list）是R中最灵活的数据结构。",
+    "text": "2.2 数据结构\n\n2.2.1 向量\n向量（vector）是R中最基础的数据结构，它可以看作是一个一维数组，可以储存数值型、字符型、逻辑型数据。一个向量中的元素必须是同一种类型。\n如下可以创建向量：\n\na &lt;- c(1,2,3,4,5)\nb &lt;- c(\"I\",\"Love\",\"You\")\nc &lt;- c(TRUE,FALSE,TRUE)\n\n\n\n2.2.2 矩阵\n矩阵（matrix）和向量类似，它可以看作是一个二维数组，其中的元素必须类型相同。\n\n\n2.2.3 数组\n数组（array）是矩阵的推广，可以看作是三维数组，其中的元素也必须类型相同。\n\n\n2.2.4 数据框\n数据框（data frame）是R中极常用的一种数据结构。\n\n\n2.2.5 列表\n列表（list）是R中最灵活的数据结构。",
     "crumbs": [
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>R基础</span>"
     ]
@@ -52,6 +52,16 @@
     "title": "2  R基础",
     "section": "2.3 控制流",
     "text": "2.3 控制流",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>R基础</span>"
+    ]
+  },
+  {
+    "objectID": "ch-1.html#流程控制",
+    "href": "ch-1.html#流程控制",
+    "title": "2  R基础",
+    "section": "2.3 流程控制",
+    "text": "2.3 流程控制\n\n2.3.1 分支结构\n\n\n2.3.2 循环结构",
     "crumbs": [
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>R基础</span>"
     ]
