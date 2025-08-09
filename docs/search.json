@@ -1,5 +1,35 @@
 [
   {
+    "objectID": "ch-1.html",
+    "href": "ch-1.html",
+    "title": "2  R基础",
+    "section": "",
+    "text": "2.1 R简介",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>R基础</span>"
+    ]
+  },
+  {
+    "objectID": "ch-1.html#r简介",
+    "href": "ch-1.html#r简介",
+    "title": "2  R基础",
+    "section": "",
+    "text": "2.1.1 R与Rstudio\nR是一种开源的、为统计和绘图而生的语言和环境，它是一门解释型语言。\nRStudio是R最热门的集成开发环境（IDE）。\n\n\n2.1.2 包与库\n我们可以从网站上下载称为“包（packages）”的用户贡献模块来拓展R的功能。事实上，R的绝大多数功能都是要通过包来实现的。\n计算机上储存包的目录称为“库（library）”。可以通过下面的方式查看库的路径：\n\n.libPaths()\n\n[1] \"C:/Users/Learner/AppData/Local/R/win-library/4.4\"\n[2] \"D:/Program Files/R/R-4.4.3/library\"              \n\n\n下载包时，默认安装至第一个路径。\n通过命令install.packages(\"包的名称\")来将包下载至库。\n当包使用时，还需要命令library(包的名称)从库中加载包。",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>R基础</span>"
+    ]
+  },
+  {
+    "objectID": "ch-1.html#数据结构",
+    "href": "ch-1.html#数据结构",
+    "title": "2  R基础",
+    "section": "2.2 数据结构",
+    "text": "2.2 数据结构\n\n2.2.1 向量\n向量（vector）是R中最基础的数据结构，它可以看作是一个一维数组，可以储存数值型、字符型、逻辑型数据。一个向量中的元素必须是同一种类型。\n如下可以创建向量：\n\na &lt;- c(1,2,3,4,5)\nb &lt;- c(\"I\",\"Love\",\"You\")\nc &lt;- c(TRUE,FALSE,TRUE)\n\n\n\n2.2.2 矩阵\n矩阵（matrix）和向量类似，它可以看作是一个二维数组，其中的元素必须类型相同。\n\n\n2.2.3 数组\n数组（array）是矩阵的推广，可以看作是三维数组，其中的元素也必须类型相同。\n\n\n2.2.4 数据框\n数据框是R中极常用的一种数据结构。\n\n\n2.2.5 列表\n列表（list）是R中最灵活的数据结构。",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>R基础</span>"
+    ]
+  },
+  {
     "objectID": "about.html",
     "href": "about.html",
     "title": "About",
@@ -11,20 +41,19 @@
     "href": "index.html",
     "title": "R学习笔记",
     "section": "",
-    "text": "R是一种开源的、为统计和绘图而生的语言和环境，它是一门解释型语言。\nRStudio是R最热门的集成开发环境（IDE）。\n\n\n\n我们可以从网站上下载称为“包（packages）”的用户贡献模块来拓展R的功能。事实上，R的绝大多数功能都是要通过包来实现的。\n计算机上储存包的目录称为“库（library）”。可以通过下面的方式查看库的路径：\n\n.libPaths()\n\n[1] \"C:/Users/Learner/AppData/Local/R/win-library/4.4\"\n[2] \"D:/Program Files/R/R-4.4.3/library\"              \n\n\n下载包时，默认安装至第一个路径。\n通过命令install.packages(\"包的名称\")来将包下载至库。\n当包使用时，还需要命令library(包的名称)从库中加载包。\n\n\n\n\n\n\n向量（vector）是R中最基础的数据结构，它可以看作是一个一维数组，可以储存数值型、字符型、逻辑型数据。一个向量中的元素必须是同一种类型。\n如下可以创建向量：\n\na &lt;- c(1,2,3,4,5)\nb &lt;- c(\"I\",\"Love\",\"You\")\nc &lt;- c(TRUE,FALSE,TRUE)\n\n\n\n\n矩阵（matrix）和向量类似，它可以看作是一个二维数组，其中的元素必须类型相同。\n\n\n\n数组（array）是矩阵的推广，可以看作是三维数组，其中的元素也必须类型相同。\n\n\n\n数据框是R中极常用的一种数据结构。\n\n\n\n列表（list）是R中最灵活的数据结构。"
+    "text": "1 前言\n我是一个R语言初学者。\n这是我的R语言学习笔记，目前还在不断地更新。",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>R学习笔记</span>"
+    ]
   },
   {
-    "objectID": "index.html#r简介",
-    "href": "index.html#r简介",
-    "title": "R学习笔记",
-    "section": "",
-    "text": "R是一种开源的、为统计和绘图而生的语言和环境，它是一门解释型语言。\nRStudio是R最热门的集成开发环境（IDE）。\n\n\n\n我们可以从网站上下载称为“包（packages）”的用户贡献模块来拓展R的功能。事实上，R的绝大多数功能都是要通过包来实现的。\n计算机上储存包的目录称为“库（library）”。可以通过下面的方式查看库的路径：\n\n.libPaths()\n\n[1] \"C:/Users/Learner/AppData/Local/R/win-library/4.4\"\n[2] \"D:/Program Files/R/R-4.4.3/library\"              \n\n\n下载包时，默认安装至第一个路径。\n通过命令install.packages(\"包的名称\")来将包下载至库。\n当包使用时，还需要命令library(包的名称)从库中加载包。"
-  },
-  {
-    "objectID": "index.html#数据结构",
-    "href": "index.html#数据结构",
-    "title": "R学习笔记",
-    "section": "",
-    "text": "向量（vector）是R中最基础的数据结构，它可以看作是一个一维数组，可以储存数值型、字符型、逻辑型数据。一个向量中的元素必须是同一种类型。\n如下可以创建向量：\n\na &lt;- c(1,2,3,4,5)\nb &lt;- c(\"I\",\"Love\",\"You\")\nc &lt;- c(TRUE,FALSE,TRUE)\n\n\n\n\n矩阵（matrix）和向量类似，它可以看作是一个二维数组，其中的元素必须类型相同。\n\n\n\n数组（array）是矩阵的推广，可以看作是三维数组，其中的元素也必须类型相同。\n\n\n\n数据框是R中极常用的一种数据结构。\n\n\n\n列表（list）是R中最灵活的数据结构。"
+    "objectID": "ch-1.html#控制流",
+    "href": "ch-1.html#控制流",
+    "title": "2  R基础",
+    "section": "2.3 控制流",
+    "text": "2.3 控制流",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>R基础</span>"
+    ]
   }
 ]

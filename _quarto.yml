@@ -1,13 +1,15 @@
 project:
-  type: website
+  type: book
+  output-dir: docs
 
-website:
+book:
   title: "R学习笔记"
-  navbar:
-    left:
-      - href: index.qmd
-        text: Home
-      - about.qmd
+  author: "Quan"
+  date: today
+  date-format: iso
+  chapters:
+    - index.qmd
+    - ch-1.qmd
 
 format:
   html:

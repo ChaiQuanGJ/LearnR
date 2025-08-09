@@ -6,10 +6,8 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="Quan">
-<meta name="dcterms.date" content="2025-08-09">
 
-<title>R学习笔记</title>
+<title>2&nbsp; R基础 – R学习笔记</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -22,6 +20,41 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
@@ -32,7 +65,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./ch-1.html" rel="next">
+<link href="./index.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
@@ -84,7 +117,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./index.html"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">R学习笔记</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./ch-1.html"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">R基础</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -111,13 +144,13 @@ ul.task-list li input[type="checkbox"] {
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./index.html" class="sidebar-item-text sidebar-link active">
+  <a href="./index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">R学习笔记</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./ch-1.html" class="sidebar-item-text sidebar-link">
+  <a href="./ch-1.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">R基础</span></span></a>
   </div>
 </li>
@@ -131,7 +164,20 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#前言" id="toc-前言" class="nav-link active" data-scroll-target="#前言"><span class="header-section-number">1</span> 前言</a></li>
+  <li><a href="#r简介" id="toc-r简介" class="nav-link active" data-scroll-target="#r简介"><span class="header-section-number">2.1</span> R简介</a>
+  <ul class="collapse">
+  <li><a href="#r与rstudio" id="toc-r与rstudio" class="nav-link" data-scroll-target="#r与rstudio"><span class="header-section-number">2.1.1</span> R与Rstudio</a></li>
+  <li><a href="#包与库" id="toc-包与库" class="nav-link" data-scroll-target="#包与库"><span class="header-section-number">2.1.2</span> 包与库</a></li>
+  </ul></li>
+  <li><a href="#数据结构" id="toc-数据结构" class="nav-link" data-scroll-target="#数据结构"><span class="header-section-number">2.2</span> 数据结构</a>
+  <ul class="collapse">
+  <li><a href="#向量" id="toc-向量" class="nav-link" data-scroll-target="#向量"><span class="header-section-number">2.2.1</span> 向量</a></li>
+  <li><a href="#矩阵" id="toc-矩阵" class="nav-link" data-scroll-target="#矩阵"><span class="header-section-number">2.2.2</span> 矩阵</a></li>
+  <li><a href="#数组" id="toc-数组" class="nav-link" data-scroll-target="#数组"><span class="header-section-number">2.2.3</span> 数组</a></li>
+  <li><a href="#数据框" id="toc-数据框" class="nav-link" data-scroll-target="#数据框"><span class="header-section-number">2.2.4</span> 数据框</a></li>
+  <li><a href="#列表" id="toc-列表" class="nav-link" data-scroll-target="#列表"><span class="header-section-number">2.2.5</span> 列表</a></li>
+  </ul></li>
+  <li><a href="#控制流" id="toc-控制流" class="nav-link" data-scroll-target="#控制流"><span class="header-section-number">2.3</span> 控制流</a></li>
   </ul>
 </nav>
     </div>
@@ -140,26 +186,14 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">R学习笔记</h1>
+<h1 class="title"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">R基础</span></h1>
 </div>
 
 
 
 <div class="quarto-title-meta">
 
-    <div>
-    <div class="quarto-title-meta-heading">Author</div>
-    <div class="quarto-title-meta-contents">
-             <p>Quan </p>
-          </div>
-  </div>
     
-    <div>
-    <div class="quarto-title-meta-heading">Published</div>
-    <div class="quarto-title-meta-contents">
-      <p class="date">2025-08-09</p>
-    </div>
-  </div>
   
     
   </div>
@@ -169,10 +203,60 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="前言" class="level1" data-number="1">
-<h1 data-number="1"><span class="header-section-number">1</span> 前言</h1>
-<p>我是一个R语言初学者。</p>
-<p>这是我的R语言学习笔记，目前还在不断地更新。</p>
+<section id="r简介" class="level2" data-number="2.1">
+<h2 data-number="2.1" class="anchored" data-anchor-id="r简介"><span class="header-section-number">2.1</span> R简介</h2>
+<section id="r与rstudio" class="level3" data-number="2.1.1">
+<h3 data-number="2.1.1" class="anchored" data-anchor-id="r与rstudio"><span class="header-section-number">2.1.1</span> R与Rstudio</h3>
+<p>R是一种开源的、<strong>为统计和绘图而生</strong>的语言和环境，它是一门解释型语言。</p>
+<p>RStudio是R最热门的<strong>集成开发环境（IDE）。</strong></p>
+</section>
+<section id="包与库" class="level3" data-number="2.1.2">
+<h3 data-number="2.1.2" class="anchored" data-anchor-id="包与库"><span class="header-section-number">2.1.2</span> 包与库</h3>
+<p>我们可以从网站上下载称为<strong>“包（packages）”</strong>的用户贡献模块来拓展R的功能。事实上，R的绝大多数功能都是要通过包来实现的。</p>
+<p>计算机上储存包的目录称为<strong>“库（library）”。</strong>可以通过下面的方式查看库的路径：</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">.libPaths</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "C:/Users/Learner/AppData/Local/R/win-library/4.4"
+[2] "D:/Program Files/R/R-4.4.3/library"              </code></pre>
+</div>
+</div>
+<p>下载包时，默认安装至第一个路径。</p>
+<p>通过命令<code>install.packages("包的名称")</code>来将包下载至库。</p>
+<p>当包使用时，还需要命令<code>library(包的名称)</code>从库中加载包。</p>
+</section>
+</section>
+<section id="数据结构" class="level2" data-number="2.2">
+<h2 data-number="2.2" class="anchored" data-anchor-id="数据结构"><span class="header-section-number">2.2</span> 数据结构</h2>
+<section id="向量" class="level3" data-number="2.2.1">
+<h3 data-number="2.2.1" class="anchored" data-anchor-id="向量"><span class="header-section-number">2.2.1</span> 向量</h3>
+<p><strong>向量（vector）</strong>是R中最基础的数据结构，它可以看作是一个一维数组，可以储存数值型、字符型、逻辑型数据。一个向量中的元素必须是同一种类型。</p>
+<p>如下可以创建向量：</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>a <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>,<span class="dv">4</span>,<span class="dv">5</span>)</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>b <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"I"</span>,<span class="st">"Love"</span>,<span class="st">"You"</span>)</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>c <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="cn">TRUE</span>,<span class="cn">FALSE</span>,<span class="cn">TRUE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="矩阵" class="level3" data-number="2.2.2">
+<h3 data-number="2.2.2" class="anchored" data-anchor-id="矩阵"><span class="header-section-number">2.2.2</span> 矩阵</h3>
+<p><strong>矩阵（matrix）</strong>和向量类似，它可以看作是一个二维数组，其中的元素必须类型相同。</p>
+</section>
+<section id="数组" class="level3" data-number="2.2.3">
+<h3 data-number="2.2.3" class="anchored" data-anchor-id="数组"><span class="header-section-number">2.2.3</span> 数组</h3>
+<p><strong>数组（array）</strong>是矩阵的推广，可以看作是三维数组，其中的元素也必须类型相同。</p>
+</section>
+<section id="数据框" class="level3" data-number="2.2.4">
+<h3 data-number="2.2.4" class="anchored" data-anchor-id="数据框"><span class="header-section-number">2.2.4</span> 数据框</h3>
+<p><strong>数据框</strong>是R中极常用的一种数据结构。</p>
+</section>
+<section id="列表" class="level3" data-number="2.2.5">
+<h3 data-number="2.2.5" class="anchored" data-anchor-id="列表"><span class="header-section-number">2.2.5</span> 列表</h3>
+<p><strong>列表（list）</strong>是R中最灵活的数据结构。</p>
+</section>
+</section>
+<section id="控制流" class="level2" data-number="2.3">
+<h2 data-number="2.3" class="anchored" data-anchor-id="控制流"><span class="header-section-number">2.3</span> 控制流</h2>
 
 
 </section>
@@ -579,11 +663,11 @@ ul.task-list li input[type="checkbox"] {
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
+      <a href="./index.html" class="pagination-link" aria-label="R学习笔记">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">R学习笔记</span></span>
+      </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./ch-1.html" class="pagination-link" aria-label="R基础">
-        <span class="nav-page-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">R基础</span></span> <i class="bi bi-arrow-right-short"></i>
-      </a>
   </div>
 </nav>
 </div> <!-- /content -->
